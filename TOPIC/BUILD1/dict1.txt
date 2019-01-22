@@ -1,0 +1,2 @@
+﻿+ defaultbot 
++ nuggets NOUN NOUN_PLURAL 

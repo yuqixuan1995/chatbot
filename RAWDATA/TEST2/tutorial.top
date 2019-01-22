@@ -1,0 +1,281 @@
+topic: ~introductions repeat keep []
+t: [Hello][Hi],welcome to our restaurant. 
+we have these dishes:White rice,Eight-treasure porridge,Beef noodles,Spicy chicken nuggets,Twice cooked pork,Braised pork leg,Fried Prawns,Mapo Tofu,Curry Chicken Leg,Fried green peppers,Stir-fried spinach with agaric,Griddle chips,Minced meat eggplant,Duck Wings in Brown Sauce,Kidney bean,Fried lotus root,Steamed bass,Tomato with eggs,Kelp with sauce,Vegetable tofu soup,Beef dumplings,Lettuce with oyster sauce,Saute diced chicken,Smoked fish,Yangzhou fried rice,Pork braised in brown sauce,Salad shredded radish,Fried radish balls,Shredded potatoes,Hot and Sour Soup2
+which one do you like?
+	$num = 0 
+	$prise = 0 
+u: (white rice)
+	White rice one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 + $prise 
+		b: (2)
+			$num = $num + 2
+			$prise = 2 + $prise 
+		b: (3)
+			$num = $num + 3
+			$prise = 3 + $prise 
+	a: (no)
+		please select again!
+
+u: (eight-treasure porridge)
+	Eight-treasure porridge one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+		
+u: (beef noodles)
+	Beef noodles one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+
+u: (spicy chicken nuggets)
+	Spicy chicken nuggets one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+		
+u: (twice cooked pork)
+	Twice cooked pork one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+
+u: (braised pork leg)
+	Braised pork leg porridge one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+		
+u: (beef noodles)
+	Beef noodles one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+
+u: (fried prawns)
+	Fried Prawns nuggets one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+		
+u: (mapo tofu)
+	Mapo Tofu one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+
+u: (curry chicken leg)
+	Curry Chicken Leg one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+		
+u: (fried green peppers)
+	Fried green peppers one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+
+u: (stir-fried spinach with agaric)
+	Stir-fried spinach with agaric one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+		
+u: (griddle chips)
+	Griddle chips one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+
+u: (minced meat eggplant)
+	Minced meat eggplant one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+		
+u: (duck wings in brown sauce)
+	Duck Wings in Brown Sauce one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+
+u: (fried prawns)
+	Fried Prawns nuggets one yuan,do you want?
+	a: (yes)
+		how many do you want?
+		b: (1)
+			$num = $num + 1
+			$prise = 1 * 1 + $prise
+		b: (2)
+			$num = $num + 2
+			$prise = 1 * 2 + $prise
+		b: (3)
+			$num = $num + 3
+			$prise = 1 * 3 + $prise
+	a: (no)
+		please select again!
+		
+u: (!$source)
+	are you finished?
+	a: (yes)
+		eat inside or take out?
+		b: (eat inside)
+			when will you eat?
+			$target = 1 
+			$source = 1 
+		b: (take out)
+			when will you eat?
+			$target = 1 
+			$source = 1 
+	a: (no)
+		please select again!
+		
+u: ($target)
+	ok,you bought $num food,and it cost $prise yuan.have a nice meal!
+	$target = null 
+	

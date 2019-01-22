@@ -1,0 +1,39 @@
+topic: ~introductions repeat keep nostay []
+t: [Hello][Hi],welcome to our restaurant. \n we have these kinds of dishes:hot dish,soup,cold dish,and staple food.
+$kind = 0 $price = 0
+t: Is this the first time for you to our dining hall?
+	a:(yes)welcome, let's do a small survey to understand you better. 
+	Are you a muslim?
+	b:(yes) $mulism = 1
+	OK,let's roder some food now.
+	b:(no) 
+	OK,let's order some food now.
+	a:（no）Welcome back, let me extract your information.
+u:(OK)
+	We have these kinds of dishes: hotdish, soup, colddish and staple food.Which kind do you want to order? 
+u: (hotdish)
+   we heve Spicy chicken nuggets 10 //, Twice cooked pork 10//,   Braised pork leg 10//, Fried Prawns 10//, Curry Chicken Leg14//, Minced meat eggplant14//, Duck Wings in Brown Sauce 14//, Steamed bass 17//,Saute diced chicken 18//,Smoked fish 19//, bouilli 20. Which one would you like?
+	a: ([ Spicy chicken nuggets Twice cooked pork  Braised pork leg  Fried Prawns])
+		Anymore?
+		$kind = 10
+		it costs $kind, sure?
+		b: (sure) 
+			how many pieces would you like?
+			c:(1)
+			$price = $price + 1
+			
+		b: (no)
+		We have these kinds of dishes: hotdish, soup, colddish and staple food.Which kind do you want to order? 
+	a: ([Curry Chicken Leg  Minced meat eggplant  Duck Wings in Brown Sauce])
+		Anymore?
+		$kind = 14
+		it costs $kind, sure?
+		b: (sure) 
+		how many pieces would you like?
+	
+
+		b: (no)
+		We have these kinds of dishes: hotdish, soup, colddish and staple food.Which kind do you want to order? 
+
+u: (!$source)
+    Let's go on,that's all?

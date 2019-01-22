@@ -1,0 +1,15 @@
+﻿loopback
+direct_v
+chatoutput
+hotdish
+Spicy
+Twice
+Braised
+Fried
+Prawns
+Chicken
+Leg
+Minced
+Duck
+Wings
+Sauce

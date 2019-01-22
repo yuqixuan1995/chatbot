@@ -1,0 +1,237 @@
+﻿
+# file: 0 full_path_to_file optional_botid
+# macro: start_line_in_file name_of_macro optional_botid (definition of user function)
+# line: start_line_in_file offset_byte_in_script (action unit in output) 
+# concept: start_line_in_file name_of_concept optional_botid (concept definition) 
+# topic: start_line_in_file name_of_topic optional_botid (topic definition) 
+# rule: start_line_in_file full_rule_tag_with_possible_label rule_kind (rule definition) 
+# Complexity of name_of_macro complexity_metric (complexity metric for function) 
+# Complexity of rule full_rule_tag_with_possible_label rule_kind complexity_metric (complexity metric for rule) 
+# bot: name_of_macro_it_happens_in botid (possible bot macro) 
+
+file: 0  C:/ChatScript/RAWDATA/HARRY/simplecontrol.top
+    macro: 6  ^harry
+          line: 8 0  # $cs_token = 4096 | 255 | 512 |
+          line: 9 60  # $cs_token += 67108864 | 65536 
+          line: 10 100  # $cs_token -= 8 
+          line: 11 115  # $cs_token -= 64 
+          line: 14 131  # ^addtopic ( ~introductions ) 
+          line: 16 160  # $cs_control_main = ~control 
+          line: 19 188  # $userprompt = ^"%user: >" 
+          line: 20 214  # $botprompt = ^"HARRY: " 
+          line: 25 238  # $singleresponse = 1 
+          line: 28 258  # $shutup = 1 
+          Complexity of ^harry: 1
+    topic: 39  ~control
+        rule: 42  ~control.0.0 u: 
+          line: 43 0  # ^gambit ( ~introductions ) 
+          Complexity of rule ~control.0.0- u: 1
+        rule: 46  ~control.1.0 u: 
+          line: 46 0  # $shutup = 1 
+          Complexity of rule ~control.1.0- u: 1
+        rule: 48  ~control.2.0 u: 
+          line: 48 0  # $shutup = null 
+          Complexity of rule ~control.2.0- u: 1
+        rule: 51  ~control.3.0 u: 
+          line: 51 0  # Callback seen. 
+          Complexity of rule ~control.3.0- u: 1
+        rule: 52  ~control.4.0 u: 
+          line: 52 0  # Loopback seen. 
+          Complexity of rule ~control.4.0- u: 1
+        rule: 53  ~control.5.0 u: 
+          line: 53 0  # Alarm seen. 
+          Complexity of rule ~control.5.0- u: 1
+        rule: 54  ~control.6.0 u: 
+          line: 54 0  # \[ loopback=1000 \] Loopback r
+          Complexity of rule ~control.6.0- u: 1
+        rule: 55  ~control.7.0 u: 
+          line: 55 0  # \[ callback=1000 \] Callback r
+          Complexity of rule ~control.7.0- u: 1
+        rule: 56  ~control.8.0 u: 
+          line: 56 0  # \[ alarm=5000 \] Alarm request
+          Complexity of rule ~control.8.0- u: 1
+        rule: 58  ~control.9.0 u: 
+          line: 59 0  # $_responsecount = %response 
+          if 63 32  
+          ifend 63 85  
+          line: 63 28  # ^if 00n( $singleresponse ) 00v
+          line: 65 86  # $$currenttopic = %topic 
+          if 67 114  
+          ifend 67 193  
+          line: 67 110  # ^if 00A( %response == $_respon
+          if 69 198  
+          line: 69 194  # ^if 00R( %length == 0 and %res
+          line: 70 254  # { 
+          line: 71 256  # ^nofail ( TOPIC ^gambit ( $$cu
+          ifend 72 306  
+          line: 72 301  # } 004 
+          if 74 311  
+          ifend 74 403  
+          line: 74 307  # ^if 00A( %response == $_respon
+          if 76 408  
+          line: 76 404  # ^if 00A( %response == $_respon
+          line: 77 447  # { 
+          line: 78 449  # @8 = ^keywordtopics ( ) 
+          loop 79 479  
+          line: 79 473  # ^loop ( -1 ) aaa 
+          line: 80 490  # { 
+          line: 81 492  # $$topic = ^first ( @8subject )
+          line: 82 523  # ^nofail ( TOPIC ^respond ( $$t
+          if 83 566  
+          line: 83 562  # ^if 00A( %response != $_respon
+          line: 84 605  # { 
+          line: 85 607  # ^end ( RULE ) 
+          ifend 86 626  
+          line: 86 621  # } 004 
+          loopend 87 629  
+          line: 87 627  # } 
+          ifend 88 634  
+          line: 88 629  # } 004 
+          if 91 639  
+          line: 91 635  # ^if 00A( %response == $_respon
+          line: 92 678  # { 
+          line: 93 680  # ^nofail ( TOPIC ^respond ( ~ke
+          ifend 94 729  
+          line: 94 724  # } 004 
+          if 99 734  
+          line: 99 730  # ^if 00P( %response == $_respon
+          line: 100 788  # { 
+          line: 101 790  # ^nofail ( TOPIC ^respond ( ~qu
+          ifend 102 839  
+          line: 102 834  # } 004 
+          if 105 844  
+          line: 105 840  # ^if 00F( %outputrejoinder or %
+          line: 106 888  # { 
+          line: 107 890  # ^end ( TOPIC ) 
+          ifend 108 910  
+          line: 108 905  # } 004 
+          if 110 915  
+          ifend 110 1037  
+          line: 110 911  # ^if 00%( %response == $_respon
+          if 112 1042  
+          line: 112 1038  # ^if 00A( %response == $_respon
+          line: 113 1081  # { 
+          line: 114 1083  # @8 = ^keywordtopics ( ) 
+          loop 115 1113  
+          line: 115 1107  # ^loop ( -1 ) aaa 
+          line: 116 1124  # { 
+          line: 117 1126  # $$topic = ^first ( @8subject )
+          line: 118 1157  # ^nofail ( TOPIC ^gambit ( $$to
+          if 119 1199  
+          line: 119 1195  # ^if 00A( %response != $_respon
+          line: 120 1238  # { 
+          line: 121 1240  # ^end ( RULE ) 
+          ifend 122 1259  
+          line: 122 1254  # } 004 
+          loopend 123 1262  
+          line: 123 1260  # } 
+          ifend 124 1267  
+          line: 124 1262  # } 004 
+          if 125 1272  
+          ifend 125 1363  
+          line: 125 1268  # ^if 00A( %response == $_respon
+          if 127 1368  
+          line: 127 1364  # ^if 00A( %response == $_respon
+          line: 128 1407  # { 
+          line: 129 1409  # @8 = ^gambittopics ( ) 
+          loop 130 1438  
+          line: 130 1432  # ^loop ( -1 ) aaa 
+          line: 131 1449  # { 
+          line: 132 1451  # $$topic = ^pick ( @8subject ) 
+          line: 133 1481  # ^nofail ( TOPIC ^gambit ( $$to
+          if 134 1523  
+          line: 134 1519  # ^if 00A( %response != $_respon
+          line: 135 1562  # { 
+          line: 136 1564  # ^end ( RULE ) 
+          ifend 137 1583  
+          line: 137 1578  # } 004 
+          loopend 138 1586  
+          line: 138 1584  # } 
+          ifend 139 1591  
+          line: 139 1586  # } 004 
+          if 141 1596  
+          line: 141 1592  # ^if 00A( %response == $_respon
+          line: 142 1635  # { 
+          line: 143 1637  # ^repeat ( ) 
+          line: 144 1649  # I don't know what to say. 
+          ifend 145 1680  
+          line: 145 1675  # } 004 
+          Complexity of rule ~control.9.0- u: 17
+    topic: 148  ~xpostprocess
+        rule: 150  ~xpostprocess.0.0 t: 
+          loop 151 6  
+          line: 151 0  # ^loop ( -1 ) aaa 
+          line: 152 17  # { 
+          line: 153 19  # $$tmp = ^last ( @9subject ) 
+          if 154 51  
+          line: 154 47  # ^if 00O( ! %server and %os == 
+          line: 155 104  # { 
+          line: 156 106  # $$tmp = ^"talk \"$$tmp\" " 
+          line: 157 133  # ^popen ( $$tmp null ) 
+          ifend 158 160  
+          line: 158 155  # } 004 
+          if 159 165  
+          line: 159 161  # ^if 00K( ! %server and %os == 
+          line: 160 214  # { 
+          line: 161 216  # $$shellerror = ^system ( "^say
+          ifend 162 266  
+          line: 162 261  # } 004 
+          loopend 164 269  
+          Complexity of rule ~xpostprocess.0.0- t: 3
+file: 0  C:/ChatScript/RAWDATA/TEST1/tutorial.top
+    topic: 1  ~introductions
+        rule: 2  ~introductions.0.0- t: 
+          line: 2 0  # [ Hello ] [ Hi ] ,welcome to o
+          line: 3 119  # $kind = 0 $price = 0 
+          Complexity of rule ~introductions.0.0- t: 1
+        rule: 4  ~introductions.1.0- t: 
+          line: 4 0  # Is this the first time for you
+          Complexity of rule ~introductions.1.0- t: 1
+        rule: 5  ~introductions.1.1 a: 
+          line: 5 0  # welcome, let's do a small surv
+          line: 6 59  # Are you a muslim? 
+          Complexity of rule ~introductions.1.1- a: 1
+        rule: 7  ~introductions.1.2 b: 
+          line: 7 0  # $mulism = 1 
+          line: 8 12  # OK,let's roder some food now. 
+          Complexity of rule ~introductions.1.2- b: 1
+        rule: 9  ~introductions.1.3 b: 
+          line: 10 0  # OK,let's order some food now. 
+          Complexity of rule ~introductions.1.3- b: 1
+        rule: 11  ~introductions.1.4- a:（no）welcome 
+          line: 11 0  # back, let me extract your info
+          Complexity of rule ~introductions.1.4- a:（no）welcome 1
+        rule: 12  ~introductions.2.0 u: 
+          line: 13 0  # We have these kinds of dishes:
+          Complexity of rule ~introductions.2.0- u: 1
+        rule: 14  ~introductions.3.0 u: 
+          line: 15 0  # we heve Spicy chicken nuggets 
+          Complexity of rule ~introductions.3.0- u: 1
+        rule: 16  ~introductions.3.1 a: 
+          line: 17 0  # Anymore? 
+          line: 18 9  # $kind = 10 
+          line: 19 20  # it costs $kind , sure? 
+          Complexity of rule ~introductions.3.1- a: 1
+        rule: 20  ~introductions.3.2 b: 
+          line: 21 0  # how many pieces would you like
+          Complexity of rule ~introductions.3.2- b: 1
+        rule: 22  ~introductions.3.3 c: 
+          line: 23 0  # $price = $price + 1 
+          Complexity of rule ~introductions.3.3- c: 1
+        rule: 25  ~introductions.3.4 b: 
+          line: 26 0  # We have these kinds of dishes:
+          Complexity of rule ~introductions.3.4- b: 1
+        rule: 27  ~introductions.3.5 a: 
+          line: 28 0  # Anymore? 
+          line: 29 9  # $kind = 14 
+          line: 30 20  # it costs $kind , sure? 
+          Complexity of rule ~introductions.3.5- a: 1
+        rule: 31  ~introductions.3.6 b: 
+          line: 32 0  # how many pieces would you like
+          Complexity of rule ~introductions.3.6- b: 1
+        rule: 35  ~introductions.3.7 b: 
+          line: 36 0  # We have these kinds of dishes:
+          Complexity of rule ~introductions.3.7- b: 1
+        rule: 38  ~introductions.4.0 u: 
+          line: 39 0  # Let's go on,that's 
+          Complexity of rule ~introductions.4.0- u: 1
